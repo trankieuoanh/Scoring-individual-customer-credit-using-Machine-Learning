@@ -1,7 +1,12 @@
 # Scoring-individual-customer-credit-using-Machine-Learning
 Assessing the customer's ability to repay debt from the Logistic model Regression, Random Forest method and K-Nearest Neighbors. From there, build a credit scoring system Credit Scoring
+
 Trong lĩnh vực tài chính– ngân hàng, việc đánh giá khả năng trả nợ của khách hàng là một yếu tố then chốt nhằm giảm thiểu rủi ro tín dụng và tối ưu hóa hoạt động cho vay. Tuy nhiên,với sự gia tăng nhanh chóng của số lượng hồ sơ tín dụng, việc thẩm định theo phương pháp thủ công trở nên không hiệu quả và thiếu chính xác. Do đó, nghiên cứu ứng dụng các mô hình dự báo như Logistic Regression kết hợp xử lý dữ liệu thông minh (WOE, IV) ngày càng trở nên cần thiết nhằm hỗ trợ ra quyết định cho các tổ chức tài chính
+
 Nghiên cứu tập trung vào việc xây dựng mô hình Logistic Regression nhằm dự đoán rủi ro tín dụng của khách hàng. Các kỹ thuật tiền xử lý dữ liệu như biến đổi Weight of Evidence(WOE) và chọn lọc biến bằng chỉ số Information Value (IV) được áp dụng để cải thiện chất lượng dữ liệu đầu vào. Nghiên cứu giới hạn trong việc khai thác các phương pháp hồi quy tuyến tính cho bài toán phân loại nhị phân và không mở rộng sang các mô hình phức tạp khác như cây quyết định, Random Forest hoặc XGBoost. Việc đánh giá mô hình được thực hiện dựa trên các tiêu chí như Accuracy, AUC, và GINI nhằm phản ánh khả năng phân biệt và hiệu quả dự báo của mô hình. 
+
 Bộ dữ liệu Credit Risk Dataset được lấy trên tràn kaggle chứa thông tin về các khoản vay vàđặc điểm của người vay, với mục tiêu phân tích và phân loại nguy cơ vỡ nợ. Bộ dữ liệu gồm 12 đặc trưng, bao gồm thông tin về tuổi, thu nhập, tình trạng sở hữu nhà, mục đích vay, xếp hạng tín dụng, số tiền vay, lãi suất vay và tỷ lệ vỡ nợ của các khoản vay.
+
 Kết quả cho thấy mô hình Logit với WOE thể hiện Sensitivity cao nhất, đồng thời có chỉ số AUC và Gini ổn định, cho thấy khả năng phân biệt tốt giữa hai nhóm khách hàng. Mô hình Random Forest tuy có độ chính xác tổng thể cao nhưng lại không cải thiện đáng kể về Sensitivity, trong khi mô hình KNN thể hiện hiệu suất kém rõ rệt do Sensitivity rất thấp.
+
 Mô hình Logit với WOE được lựa chọn để xây dựng thang điểm tín dụng (scorecard). Điểmtín dụng được tính toán từ xác suất vỡ nợ thông qua điểm z-score và được quy đổi về thang điểm tuyến tính để dễ áp dụng trong thực tiễn. Phân phối điểm tín dụng cho thấy phần lớn khách hàng nằm trong khoảng điểm từ 97 đên 104, cho thấy đây là nhóm chiếm tỷ trọng lớn nhất trong tập dữ liệu huấn luyện
